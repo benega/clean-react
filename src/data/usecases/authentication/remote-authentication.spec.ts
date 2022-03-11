@@ -8,10 +8,11 @@ class RemoteAuthentication {
 
 describe("RemoteAuthentication", () => {
   test("Should call HttpClient with correct URL", async () => {
-    const url = "any_url";
-    const httpClient = new HttpClient();
-    const sut = new RemoteAuthentication(url); //system under test
-    await sut.auth();
-    expect(httpClient.url).toBe(url);
+      expect('test').toBe(1);
+    // const url = "any_url";
+    // const httpClient = new HttpClient();
+    // const sut = new RemoteAuthentication(url); //system under test
+    // await sut.auth();
+    // expect(httpClient.url).toBe(url);
   });
 });
