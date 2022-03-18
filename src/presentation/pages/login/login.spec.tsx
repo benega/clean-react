@@ -39,16 +39,18 @@ describe('Login Component', () => {
   test('should call Validation width correct email', () => {
     const { sut, validationSpy } = makeSut()
     const emailInput = sut.getByTestId('email')
-    fireEvent.input(emailInput, { target: { value: 'any_email' } })
+    const email = faker.internet.email()
+    fireEvent.input(emailInput, { target: { value: email } })
     expect(validationSpy.fieldName).toBe('email')
-    expect(validationSpy.fieldValue).toBe('any_email')
+    expect(validationSpy.fieldValue).toBe(email)
   })
 
   test('should call Validation width correct password', () => {
     const { sut, validationSpy } = makeSut()
     const passowordInput = sut.getByTestId('password')
-    fireEvent.input(passowordInput, { target: { value: 'any_password' } })
+    const password = faker.internet.password()
+    fireEvent.input(passowordInput, { target: { value: password } })
     expect(validationSpy.fieldName).toBe('password')
-    expect(validationSpy.fieldValue).toBe('any_password')
+    expect(validationSpy.fieldValue).toBe(password)
   })
 })
