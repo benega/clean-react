@@ -4,7 +4,7 @@ import { Login } from '@/presentation/pages'
 import { Validation } from '@/presentation/protocols/validation'
 
 class ValidationLogin implements Validation {
-  validate (input: object): string {
+  validate (fieldName: string, fieldValue: string): string {
     return ''
   }
 }
